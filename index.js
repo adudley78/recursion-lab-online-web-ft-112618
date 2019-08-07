@@ -1,3 +1,5 @@
+import { reverse } from "dns";
+
 function printString(myString) {
     console.log(myString[0]);
 
@@ -6,5 +8,13 @@ function printString(myString) {
         printString(mySubString);
     } else {
         return true;
+    }
+}
+
+function reverseString(str){
+    if(str === ""){
+        return "";
+    } else {
+        return reverseString(str.substring(1)) + str[0];
     }
 }
